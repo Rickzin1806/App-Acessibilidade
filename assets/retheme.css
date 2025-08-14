@@ -1,0 +1,90 @@
+
+/* ===== Novo tema acessível e moderno (2025) ===== */
+:root{
+  --bg: #0b1020;        /* fundo escuro azul */
+  --surface: #121a2e;   /* cartões/sections */
+  --accent: #4fd1c5;    /* teal */
+  --accent-2: #7aa2ff;  /* azul vivo para links */
+  --text: #ecf2ff;      /* texto primário */
+  --muted: #b8c2e0;     /* texto secundário */
+  --danger: #ff6b6b;
+  --success: #4ade80;
+  --radius: 16px;
+}
+
+html{scroll-behavior:smooth}
+body{
+  background: radial-gradient(1200px 800px at 80% -100px, #1b2450 10%, var(--bg) 60%);
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  line-height: 1.6;
+}
+
+a{ color: var(--accent-2); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+a:hover, a:focus{ color: var(--accent); outline: none; }
+
+/* Cabeçalho / banner */
+.novo-banner, .secaoDestaque{
+  background: linear-gradient(135deg, #1f2a4f 0%, #0f1430 60%, #091025 100%);
+  color: var(--text);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+  overflow: hidden;
+}
+
+button, .botao, .botaoDestaque {
+  background: var(--accent);
+  color: #0a0f1f;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 20px;
+  font-weight: 700;
+  transition: transform .08s ease, box-shadow .2s ease, background .2s ease;
+}
+button:hover, .botao:hover, .botaoDestaque:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(79,209,197,.35);
+}
+
+/* Cartões e sections */
+section, .container, .cartao, .secaoDiferenciais, .secaoSobre, .secaoPlanos, .secaoInstitucional, .listaDeArtigos, .secaoBlog, .secaoContato{
+  background: transparent;
+}
+
+.cartao, .box, .panel {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+
+h1,h2,h3,h4{ color: var(--text); letter-spacing: .3px }
+p{ color: var(--muted) }
+
+/* Banners */
+.banner-principal{
+  background-image: url('../img/sobre-apeperia.png');
+  background-size: cover;
+  background-position: center;
+  min-height: 360px;
+  border-radius: var(--radius);
+}
+
+/* Form / feedback cores */
+.campo-erro, .erro, .aviso-erro{ color: var(--danger) }
+.sucesso{ color: var(--success) }
+
+/* Rodapé */
+.rodape{
+  background: #0a0f1f;
+  color: var(--muted);
+  border-top: 1px solid rgba(255,255,255,.06);
+}
+
+/* Links do menu */
+.cabecalho a{ color: var(--text) }
+.cabecalho a:hover{ color: var(--accent) }
+
+/* Acessibilidade */
+:focus-visible{ outline: 3px solid var(--accent-2); outline-offset: 3px }
+@media (prefers-reduced-motion: reduce){ *{animation:none!important; transition:none!important}}
